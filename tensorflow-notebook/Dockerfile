@@ -4,6 +4,8 @@ FROM jupyter/scipy-notebook
 
 LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 
+RUN apk --update add postgresql-client
+
 # Install Tensorflow
 RUN conda install --quiet --yes \
     'tensorflow=1.3*' \
